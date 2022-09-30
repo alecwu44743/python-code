@@ -203,12 +203,12 @@ def input_data():
                                 except:
                                     continue        
                         
-                        if res.upper() == 'Y' or res.upper() == 'YES':
-                            h = float(h)*100
-                            if h > 220 or h < 100:
-                                raise
-                    else:
-                        raise
+                            if res.upper() == 'Y' or res.upper() == 'YES':
+                                h = float(h)*100
+                                if h > 220 or h < 100:
+                                    raise
+                    elif float(h) <= 220 or float(h) >= 100:
+                            break
                 if float(h)>220 or float(h)<100:
                     raise
                 else:
